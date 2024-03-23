@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block nav %}
+  <a href='/cloneapps/create'>Create</a>
+{% endblock nav %}
+
+{% block main %}
+  <div class="content-title">
+    <h1>Cloneapps</h1>
+  </div>
+  <div class="content-body">
+    {% if cloneapps %}
+      <table>
+        <tr>
+          <th>Cloneapp</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+        {% for cloneapp in cloneapps %}
+            <tr>
+              <td><a href="/cloneapps/view/{{ cloneapp.id }}/">{{ cloneapp.title }}</a></td>
+              <td class='text-center'>{{ cloneapp.status }}</td>
+              <td class='table-action'>
+                <a href="/cloneapps/view/{{ cloneapp.id }}/">View</a>
+                <a href="/cloneapps/edit/{{ cloneapp.id }}/">Edit</a>
+              </td>
+            </tr>
+        {% endfor %}
+      </table>
+
+    {% else %}
+        <p>No cloneapps are available.</p>
+    {% endif %}
+  </div>
+{% endblock main %}

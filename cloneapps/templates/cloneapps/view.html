@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block nav %}
+  <a href="/cloneapps">Cloneapps</a>
+  <a href="/cloneapps/create">Create</a>
+  <a href="/cloneapps/edit/{{ cloneapp.id }}">Edit</a>
+{% endblock nav %}
+
+{% block main %}
+  <h1>View Cloneapp-{{ cloneapp.id }}</h1>
+  <table>
+    <tr><td>Title</td><td>{{ cloneapp.title }}</td></tr>
+    <tr><td>Status</td><td>{{ cloneapp.status.title }}</td></tr>
+  </table>
+  <div class="content-body">
+    <a class='btn' href='/cloneapps/edit/{{ cloneapp.id }}'>Edit</a>
+  </div>
+{% endblock main %}
