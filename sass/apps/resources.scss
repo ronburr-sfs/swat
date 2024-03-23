@@ -1,0 +1,27 @@
+#page-resources-index {
+    background-image: url("https://plasticfreeqac-space.nyc3.cdn.digitaloceanspaces.com/img/home_our_mission.webp");
+    background-size: cover;
+    background-color: $color-background;
+    h1 {
+        color: white;
+    }
+    .content-body {
+        max-width: 50em;
+        margin: auto;
+    }
+    section {
+        margin: 0.5em 0;
+        padding: 0.5em 0;
+        border-radius: 1em;
+        background-color: white;
+        .section-title {
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .section-body {
+            margin-top: 0.5em;
+            font-weight: normal;
+        }
+    }
+}

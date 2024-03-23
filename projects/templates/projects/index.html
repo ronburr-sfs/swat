@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block nav %}
+  <a href='/projects/create'>Create</a>
+{% endblock nav %}
+
+{% block main %}
+  <h1>Projects</h1>
+  {% if projects %}
+    <table>
+      <tr>
+      <th>Project</th>
+        <th>Priority</th>
+        <th>Status</th>
+        <th>Action</th>
+      </tr>
+      {% for project in projects %}
+          <tr>
+            <td>{{project.title}}</td>
+            <td class='text-center'>{{ project.priority }}</td>
+            <td class='text-center'>{{ project.status }}</td>
+            <td class='table-action'>
+              <a href="/projects/view/{{project.id}}/">V</a>
+              <a href="/projects/edit/{{project.id}}/">E</a>
+            </td>
+          </tr>
+      {% endfor %}
+    </table>
+  {% else %}
+    <div class="content-body text-center">No projects are available.</div>
+  {% endif %}
+{% endblock %}

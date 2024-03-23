@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block main %}
+  <div class='sidebar col-md-2'>
+    <div class='sidebar-inner'>
+      <a class='sidebar-button' href='/tasks'>List</a>
+      <a class='sidebar-button' href='/tasks/view/{{ form.instance.id }}'>View</a>
+    </div>
+  </div>
+  <div class='content col-md-10'>
+    <h1>Task - Edit</h1>
+    <form method="post">
+        {% csrf_token %}
+        <table>
+          {{ form.as_table }}
+        </table>
+        <input type="submit" value="Submit">
+    </form>
+  </div>
+{% endblock main %}

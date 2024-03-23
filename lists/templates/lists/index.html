@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block nav %}
+  <a href='/lists/create'>Create</a>
+{% endblock nav %}
+
+{% block main %}
+  <div class="content-title">
+    <h1>Lists</h1>
+  </div>
+  <div class="content-body">
+    <div class="content-body-inner">
+      {% if lists %}
+        <table>
+          <tr>
+            <th>List</th>
+            <th>Action</th>
+          </tr>
+          {% for list in lists %}
+            {% if list.status_id > 1 %}
+              {% ifchanged list.status_id %}
+                <tr><th colspan=4 style="border-color: #eee; background-color: #eee;">{{ list.status }}</th></tr>
+              {% endifchanged %}
+            {% endif %}
+            <tr>
+              <td><a href="/lists/view/{{ list.id }}/">{{ list.title }}</a></td>
+              <td class='table-action'>
+                <a href="/lists/view/{{ list.id }}/">V</a>
+                <a href="/lists/edit/{{ list.id }}/">E</a>
+              </td>
+            </tr>
+          {% endfor %}
+        </table>
+      {% else %}
+          <p>No lists are available.</p>
+      {% endif %}
+    </div>
+  </div>
+  <style>
+    .content-body-inner {
+      display: inline-block;
+      padding: 1em 3em;
+      margin: auto;
+      background-color: #eee;
+      border-radius: 1em;
+      table th {
+        background-color: #ddd;
+      }
+    }
+  </style>
+{% endblock main %}

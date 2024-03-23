@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block nav %}
+  <a href="/frogs">Frogs</a>
+  <a href="/frogs/create">Create</a>
+  <a href="/frogs/edit/{{ frog.id }}">Edit</a>
+{% endblock nav %}
+
+{% block main %}
+  <h1>View Frog-{{ frog.id }}</h1>
+  <table>
+    <tr><td>Title</td><td>{{ frog.title }}</td></tr>
+    <tr><td>Status</td><td>{{ frog.status.title }}</td></tr>
+  </table>
+  <div class="content-body">
+    <a class='btn' href='/frogs/edit/{{ frog.id }}'>Edit</a>
+  </div>
+{% endblock main %}

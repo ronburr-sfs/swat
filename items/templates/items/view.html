@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block nav %}
+  <a href="/items">Items</a>
+  <a href="/items/create">Create</a>
+  <a href="/items/edit/{{ cleanapp.id }}">Edit</a>
+{% endblock nav %}
+
+{% block main %}
+  <h1>View Item-{{ item.id }}</h1>
+  <table>
+    <tr><td>Title</td><td>{{ item.title }}</td></tr>
+    <tr><td>Status</td><td>{{ item.status.title }}</td></tr>
+  </table>
+  <div class="content-body">
+    <a class='btn' href='/cleanapps/edit/{{ frog.id }}'>Edit</a>
+  </div>
+{% endblock main %}

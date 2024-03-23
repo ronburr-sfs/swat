@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  <h1>{{ title }}</h1>
+{% endblock title %}
+
+{% block content %}
+  <table>
+    <tr><td>Project</td><td>{{ comment.project.title }}</td></tr>
+    <tr><td>Title</td><td>{{ comment.title }}</td></tr>
+    <tr><td>Details</td><td>{{ comment.body }}</td></tr>
+    <tr><td>Priority</td><td>{{ comment.priority.title }}</td></tr>
+    <tr><td>Status</td><td>{{ comment.status.title }}</td></tr>
+  </table>
+{% endblock content %}

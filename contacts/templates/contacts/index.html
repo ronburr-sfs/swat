@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block nav %}
+  <a href='/contacts/create'>Create</a>
+{% endblock nav %}
+
+{% block main %}
+  <div class="content-title">
+    <h1>Contacts</h1>
+  </div>
+  <div class="content-body">
+    {% if contacts %}
+      <table>
+        <tr>
+          <th>Contact</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+        {% for contact in contacts %}
+            <tr>
+              <td><a href="/contacts/view/{{ contact.id }}/">{{ contact.title }}</a></td>
+              <td class='text-center'>{{ contact.status }}</td>
+              <td class='table-action'>
+                <a href="/contacts/view/{{ contact.id }}/">View</a>
+                <a href="/contacts/edit/{{ contact.id }}/">Edit</a>
+              </td>
+            </tr>
+        {% endfor %}
+      </table>
+
+    {% else %}
+        <p>No contacts are available.</p>
+    {% endif %}
+  </div>
+{% endblock main %}

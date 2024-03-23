@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block nav %}
+  <a href="/lists">Lists</a>
+  <a href="/lists/create">Create</a>
+  <a href="/lists/edit/{{ list.id }}">Edit</a>
+{% endblock nav %}
+
+{% block main %}
+  <h1>List - {{ list.title }}</h1>
+  <div class="content-body">
+    <table>
+      <tr>
+        <th>Item</th>
+        <th>Status</th>
+        <th>Action</th>
+      </tr>
+      {% if items %}
+          {% for item in items %}
+              <tr>
+                <td><a href="/items/view/{{ item.id }}/">{{ item.title }}</a></td>
+                <td class='text-center'>{{ item.status }}</td>
+                <td class='table-action'>
+                  <a href="/items/view/{{ item.id }}/">View</a>
+                  <a href="/items/edit/{{ item.id }}/">Edit</a>
+                </td>
+              </tr>
+          {% endfor %}
+      {% else %}
+        <tr><td colspan=3>No items are available.</td></tr>
+      {% endif %}
+    </table>
+  </div>
+  <br>
+  <table>
+    <tr><th>Field</th><th>Value</th></tr>
+    <tr><td>Title</td><td>{{ list.title }}</td></tr>
+    <tr><td>Status</td><td>{{ list.status.title }}</td></tr>
+  </table>
+  <div class="content-body">
+    <a class='btn' href='/lists/edit/{{ list.id }}'>Edit</a>
+  </div>
+{% endblock main %}

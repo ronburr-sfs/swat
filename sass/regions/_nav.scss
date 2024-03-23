@@ -1,0 +1,15 @@
+#nav {
+  background: $brand-secondary-light;
+  padding: 0.5em 1em;
+  text-align: center;
+  a {
+    display: inline-block;
+    margin: 0 0.5em;
+    color: black;
+    font-size: 1.25rem;
+    font-weight: bold;
+    &:hover {
+      color: #666;
+    }
+  }
+}

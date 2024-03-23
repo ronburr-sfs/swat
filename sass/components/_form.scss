@@ -1,0 +1,16 @@
+form {
+    table {
+        background-color: #eee;
+        border-radius: 0.5em;
+        th, td {
+            border: none;
+            background-color: transparent;
+        }
+        th {
+            text-align: right;
+        }
+        td input, td textarea {
+            background-color: white;
+        }
+    }
+}

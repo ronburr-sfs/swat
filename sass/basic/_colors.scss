@@ -1,0 +1,19 @@
+$brand-primary: darkblue;
+$brand-primary-dark: darken($brand-primary, 5%);
+$brand-primary-light: lighten($brand-primary, 5%);
+$brand-primary-very-light: lighten($brand-primary, 15%);
+
+$brand-secondary: #8EE070;
+$brand-secondary-dark: darken($brand-secondary, 5%);
+$brand-secondary-very-dark: darken($brand-secondary, 15%);
+$brand-secondary-light: lighten($brand-secondary, 5%);
+$brand-secondary-very-light: lighten($brand-secondary, 15%);
+
+
+$grey-very-light: #eee;
+$grey-light: #ccc;
+$grey-medium: #999;
+$grey-dark: #666;
+$grey-very-dark: #333;
+
+$color-background: lighten(lightskyblue, 10%);

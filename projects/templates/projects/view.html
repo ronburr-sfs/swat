@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block nav %}
+  <a href="/projects">Projects</a>
+  <a href="/tasks/edit/{{ task.id }}">Edit</a>
+  <a href="/tasks/create">Create-Task</a>
+{% endblock nav %}
+
+{% block main %}
+  <h1>Project - {{ project.title }}</h1>
+  <table class='table'>
+    <tr>
+      <th>Task</th>
+      <th>Priority</th>
+      <th>Status</th>
+      <th>Action</th>
+    </tr>
+    {% if tasks %}
+      <tr>
+        {% for task in tasks %}
+          <tr>
+            <td>{{ task.title }}</a></td>
+            <td class='text-center'>{{ task.priority }}</td>
+            <td class='text-center'>{{ task.status }}</td>
+            <td class='table-action text-center'>
+              <a href="/tasks/view/{{task.id}}/">V</a>
+              <a href="/tasks/edit/{{task.id}}/">E</a>
+            </td>
+          </tr>
+        {% endfor %}
+      </tr>
+    {% else %}
+        <tr><td colspan="5">No tasks are available.</td></tr>
+    {% endif %}
+  </table>
+  <br>
+  <table class='table'>
+    {% if project.body %}
+      <tr>
+        <td>Description</td>
+        <td>{{ project.body }}</td>
+      </tr>
+    {% endif %}
+    <tr>
+      <td>Category</td>
+      <td class='text-center'>{{ project.category }}</td>
+    </tr>
+    <tr>
+      <td>Priority</td>
+      <td class='text-center'>{{ project.priority }}</td>
+    </tr>
+    <tr>
+      <td>Status</td>
+      <td class='text-center'>{{ project.status }}</td>
+    </tr>
+  </table>
+{% endblock main %}

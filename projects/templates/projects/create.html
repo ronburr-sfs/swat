@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block nav %}
+  <a href="projects">Projects</a>
+{% endblock nav %}
+
+{% block main %}
+  <h1>Create Project</h1>
+  <form method="post">
+      {% csrf_token %}
+      <table>
+        {{ form.as_table }}
+      </table>
+      <div class="content-body">
+        <input class='btn' type="submit" value="Submit">
+      </div>
+  </form>
+{% endblock main %}

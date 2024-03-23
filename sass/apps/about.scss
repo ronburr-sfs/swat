@@ -1,0 +1,102 @@
+#page-about-index {
+    background-color: #ddd;
+    #hero {
+        background-image: url("https://plasticfreeqac-space.nyc3.digitaloceanspaces.com/img/about-banner.webp");
+        background-size: cover;
+        text-align: center;
+        height: 900px;
+        padding-top: 800px;
+        border-radius: 0 0 1em 1em;
+        #hero-inner {
+            max-width: 70%;
+            margin: auto;
+            padding: 0.5em 0.25em;
+            border-radius: 1em;
+            background-color: $brand-secondary-very-dark;
+            opacity: 0.9;
+            color: white;
+            h1 {
+                color: white;
+            }
+            section {
+                background-color: transparent;
+                color: white;
+            }
+        }
+    }
+    section {
+        margin: 0.5em 0;
+        padding: 0.25em 0.5em;
+        background-color: white;
+        color: black;
+        .section-title {
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .section-body {
+            margin-top: 0.5em;
+            font-weight: normal;
+        }
+        .section-blocks {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-around;
+            list-style: none;
+            .section-block {
+                margin-bottom: 1em;
+            }
+        }
+    }
+    #section-vision, #section-mission, #section-history {
+        margin: 2em auto;
+        padding: 1em;
+        width: 40em;
+        border-radius: 1em;
+    }
+    #section-partners {
+        margin-bottom: 1.5em;
+        background-color: white;
+        border-radius: 1em;
+        .section-block {
+            height: 3em;
+        }
+    }
+    #section-team {
+        border-radius: 1em;
+        .section-subtitle {
+            text-align: center;
+            a:hover {
+                color: white;
+            }
+        }
+        .section-block {
+            margin-bottom: 1em;
+            width: 15em;
+            border-style: solid;
+            border-color: $grey-dark;
+            border-width: thin;
+            background: $grey-dark;
+            color: white;
+            border-radius: 0.5em;
+            img {
+                width: 100%;
+                border-radius: 0.5em 0.5em 0 0;
+            }
+            .member-info {
+                text-align: center;
+                background: $grey-dark;
+                color: white;
+                .member-title {
+                    font-size: 0.75em;
+                }
+            }
+            .member-desc {
+                font-size: 0.75em;
+                text-align: left;
+                display: none;
+                padding: 0.5em;
+            }
+        }
+    }
+}

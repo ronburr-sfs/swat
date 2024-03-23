@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block nav %}
+  <a class='sidebar-button' href='/tasks/create'>Create</a>
+{% endblock nav %}
+
+{% block main %}
+  <h1>Tasks</h1>
+  {% if tasks %}
+    <table>
+      <tr>
+        <th>Project</th>
+        <th>Task</th>
+        <th>Priority</th>
+        <th>Status</th>
+        <th>Action</th>
+      </tr>
+      {% for task in tasks %}
+          <tr>
+            <td><a href="/projects/view/{{ task.project.id }}/">{{ task.project.title }}</a></td>
+            <td><a href="/tasks/view/{{ task.id }}/">{{ task.title }}</a></td>
+            <td class='text-center'>{{ task.priority }}</td>
+            <td class='text-center'>{{ task.status }}</td>
+            <td class='table-action'>
+              <a href="/tasks/view/{{ task.id }}/">View</a>
+              <a href="/tasks/edit/{{ task.id }}/">Edit</a>
+            </td>
+          </tr>
+      {% endfor %}
+    </table>
+  {% else %}
+    <div class="content-body">No tasks are available.</div>
+  {% endif %}
+{% endblock main %}

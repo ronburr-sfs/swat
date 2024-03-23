@@ -1,0 +1,16 @@
+#page-newsletters-index {
+    background-image: url("https://plasticfreeqac-space.nyc3.cdn.digitaloceanspaces.com/img/home_our_mission.webp");
+    background-size: cover;
+    background-color: $color-background;
+    section {
+        background: transparent;
+        padding: 1em;
+        margin: 2em auto 8em;
+        border-radius: 0.5em;
+        table {
+            td {
+                background-color: white;
+            }
+        }
+    }
+}

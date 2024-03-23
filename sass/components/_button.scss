@@ -1,0 +1,15 @@
+.btn {
+  padding: 0.25em 1em;
+  border-radius: 0.5rem;
+  background-color: $brand-secondary-very-dark;
+  color: black;
+  font-weight: bold;
+  border: none;
+  outline: none !important;
+}
+.btn:hover {
+  color: white;
+}
+.btn:focus {
+  outline: none !important;
+}

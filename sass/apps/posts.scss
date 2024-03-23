@@ -1,0 +1,102 @@
+#page-posts-index {
+    background: white;
+    .content-title {
+        text-align: center;
+    }
+    .content-subtitle {
+        color: #666;
+        text-align: center;
+        a {
+            color: darken($brand-secondary, 30%);
+        }
+        a:hover {
+            color: darken($brand-secondary, 20%);
+            text-decoration: none;
+        }
+    }
+
+    .content-body {
+        margin: auto;
+    }
+    section {
+        margin: 0.5em 0;
+        padding: 0.5em 0;
+        background-color: white;
+        border-radius: 0.5em;
+        .section-title {
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .section-body {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-around;
+            margin-top: 0.5em;
+            font-weight: normal;
+            list-style: none;
+            a {
+                color: black;
+            }
+            .section-block {
+                border-style: solid;
+                border-width: thin;
+                border-color: $grey-dark;
+                background-color: #eee;
+                width: 400px;
+                margin-bottom: 1em;
+                text-align: center;
+                border-radius: 0.5em;
+                img {
+                    width: 100%;
+                }
+                div:nth-of-type(1) {
+                    font-size: 1em;
+                    font-weight: bold;
+                }
+                div:nth-of-type(2) {
+                    display: none;
+                }
+                div:nth-of-type(3) {
+                    font-size: 0.75em;
+                }
+            }
+        }
+    }
+}
+
+#page-posts-view {
+    .content {
+        background-color: #eee;
+    }
+    .content-title {
+        .post-author-date {
+            margin: 0 0 0.25em;
+            text-align: center;
+            font-weight: bold;
+        }
+        .post-categories {
+            margin: 0.25em 0;
+            text-align: center;
+            font-weight: bold;
+        }
+    }
+    .content-body {
+        padding: 1em 3em 0.25em;
+        max-width: 50em;
+        text-align: center;
+        margin: 1em auto 2em;
+        background-color: white;
+        border-style: solid;
+        border-color: #aaa;
+        border-width: thin;
+        border-radius: 0.5em;
+        .post-image img {
+            width: 100%;
+        }
+        .post-body {
+            padding: 2em 1em 1em;
+            text-align: left;
+        }
+    }
+}

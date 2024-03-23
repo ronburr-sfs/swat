@@ -1,0 +1,28 @@
+#page-donate-index {
+    background-color: $color-background;
+    background-image: url('https://plasticfreeqac-space.nyc3.digitaloceanspaces.com/img/home_hero_2.webp');
+    .content-body {
+        max-width: 80em;
+        margin: auto;
+        padding: 2em;
+    }
+    section {
+        width: 30em;
+        margin: 1em auto;
+        padding: 2em;
+        border-radius: 2em;
+        background-color: white;
+        .section-title {
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .section-body {
+            margin-top: 0.5em;
+            font-weight: normal;
+        }
+    }
+    section:nth-child(odd) {
+        background-color: #eee;
+    }
+}

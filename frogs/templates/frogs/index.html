@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block nav %}
+  <a href='/frogs/create'>Create</a>
+{% endblock nav %}
+
+{% block main %}
+  <div class="content-title">
+    <h1>Frogs</h1>
+  </div>
+  <div class="content-body">
+    {% if frogs %}
+      <div>
+        <table>
+          <tr>
+            <th>Frog</th>
+            <th>Action</th>
+            <th>Update</th>
+          </tr>
+          {% for frog in frogs %}
+            {% if frog.status_id > 1 %}
+              {% ifchanged frog.status_id %}
+                <tr><th colspan=4 style="border-color: #eee; background-color: #eee;">{{ frog.status }}</th></tr>
+              {% endifchanged %}
+            {% endif %}
+            <tr>
+              <td>{{ frog.title }}</td>
+              <td class='table-action'>
+                <a href="/frogs/view/{{ frog.id }}/">V</a>
+                <a href="/frogs/edit/{{ frog.id }}/">E</a>
+              </td>
+              <td class='table-action'>
+                <a href="/frogs/update/{{ frog.id }}?status={{ frog.status_id|add:'-1' }}">+</a>
+                <a href="/frogs/update/{{ frog.id }}?status={{ frog.status_id|add:'+1' }}">-</a>
+                <a href="/frogs/update/{{ frog.id }}?status=5">C</a>
+              </td>
+            </tr>
+          {% endfor %}
+        </table>
+      </div>
+    {% else %}
+        <p>No frogs are available.</p>
+    {% endif %}
+  </div>
+  <style>
+    #main .content-body {
+      table th {
+        background-color: #ddd;
+      }
+      div {
+        display: inline-block;
+        padding: 1em 2em;
+        border-radius: 1em;
+        background-color: #f2f2f2;
+      }
+    }
+  </style>
+{% endblock main %}

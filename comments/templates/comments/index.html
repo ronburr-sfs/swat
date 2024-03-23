@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  <h1>Comments - Open</h1>
+{% endblock title %}
+
+{% block content %}
+  {% if comments %}
+      <ul>
+      {% for comment in comments %}
+          <li><a href="/comments/{{comment.id}}/">{{comment.title}}</a></li>
+      {% endfor %}
+      </ul>
+  {% else %}
+      <p>No comments are available.</p>
+  {% endif %}
+{% endblock content %}

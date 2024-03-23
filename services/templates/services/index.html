@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block nav %}
+  <a href='/services/create'>Create</a>
+{% endblock nav %}
+
+{% block main %}
+  <div class="content-title">
+    <h1>Services</h1>
+  </div>
+  <div class="content-body">
+    {% if services %}
+      <table>
+        <tr>
+          <th>Service</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+        {% for service in services %}
+            <tr>
+              <td><a href="/services/view/{{ service.id }}/">{{ service.title }}</a></td>
+              <td class='text-center'>{{ service.status }}</td>
+              <td class='table-action'>
+                <a href="/services/view/{{ service.id }}/">View</a>
+                <a href="/services/edit/{{ service.id }}/">Edit</a>
+              </td>
+            </tr>
+        {% endfor %}
+      </table>
+
+    {% else %}
+        <p>No services are available.</p>
+    {% endif %}
+  </div>
+{% endblock main %}

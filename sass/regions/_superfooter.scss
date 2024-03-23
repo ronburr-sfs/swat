@@ -1,0 +1,15 @@
+#superfooter {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    padding: 0 3em;
+    background: $brand-primary-light;
+    ul li {
+        list-style-type: none;
+    }
+    a {
+        color: white;
+        &:hover {
+            color: $brand-secondary-very-dark;
+        }
+    }
+}

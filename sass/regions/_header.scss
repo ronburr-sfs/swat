@@ -1,0 +1,24 @@
+#header {
+  display: grid;
+  grid-template-columns: 1fr 10fr;
+  background: $brand-primary;
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 0.5em;
+  a {
+    color: white;
+    &:hover {
+      color: $brand-secondary;
+    }
+  }
+  #header-left {
+    text-align: left;
+  }
+  #header-right {
+    text-align: right;
+    a {
+      margin-left: 0.5em;
+    }
+  }
+}

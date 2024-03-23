@@ -1,0 +1,990 @@
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+}
+
+a {
+  color: #0000f1;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #2525ff;
+}
+
+.text-center {
+  text-align: center;
+}
+
+table, .table {
+  border-collapse: collapse;
+  margin: 0.5em auto;
+  background-color: white;
+}
+table tr th, table tr td, .table tr th, .table tr td {
+  border: 1px solid #aaa;
+  padding: 0.25rem 1rem;
+}
+table tr th, .table tr th {
+  text-align: center;
+  background: #eee;
+}
+table tr td.table-action a, .table tr td.table-action a {
+  display: inline-block;
+  background: darkblue;
+  color: white;
+  margin: 0.1rem 0.1rem;
+  padding: 0.1rem 1rem;
+  border-radius: 1rem;
+}
+table tr td.table-action a:hover, .table tr td.table-action a:hover {
+  text-decoration: none;
+  background: #0000d8;
+}
+table tr td:first-child, .table tr td:first-child {
+  text-align: left;
+}
+
+.btn {
+  padding: 0.25em 1em;
+  border-radius: 0.5rem;
+  background-color: #5cd231;
+  color: black;
+  font-weight: bold;
+  border: none;
+  outline: none !important;
+}
+
+.btn:hover {
+  color: white;
+}
+
+.btn:focus {
+  outline: none !important;
+}
+
+.block {
+  margin: 0 auto 1rem;
+  padding: 0 0.5rem;
+}
+.block .block-inner {
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+}
+.block .block-inner .block-title {
+  padding: 0.25rem 1rem;
+  border-radius: 0.5rem 0.5rem 0 0;
+  text-align: center;
+  font-size: 1em;
+  font-weight: bold;
+  background: #0000a5;
+  color: white;
+}
+.block .block-inner .block-body {
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+.block .block-inner .block-action {
+  margin: 0.5rem auto;
+  text-align: center;
+}
+.block .block-inner .block-action a {
+  display: inline-block;
+  padding: 0.25rem 1rem;
+  border-radius: 0.25rem;
+  font-size: 0.85rem;
+  font-weight: bold;
+  background: #9fe585;
+  color: white;
+}
+
+form table {
+  background-color: #eee;
+  border-radius: 0.5em;
+}
+form table th, form table td {
+  border: none;
+  background-color: transparent;
+}
+form table th {
+  text-align: right;
+}
+form table td input, form table td textarea {
+  background-color: white;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+#header {
+  display: grid;
+  grid-template-columns: 1fr 10fr;
+  background: darkblue;
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 0.5em;
+}
+#header a {
+  color: white;
+}
+#header a:hover {
+  color: #8EE070;
+}
+#header #header-left {
+  text-align: left;
+}
+#header #header-right {
+  text-align: right;
+}
+#header #header-right a {
+  margin-left: 0.5em;
+}
+
+#nav {
+  background: #9fe585;
+  padding: 0.5em 1em;
+  text-align: center;
+}
+#nav a {
+  display: inline-block;
+  margin: 0 0.5em;
+  color: black;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+#nav a:hover {
+  color: #666;
+}
+
+#main {
+  padding: 0.5em 0;
+  background: #ccc;
+}
+#main .content-title, #main h1 {
+  margin: 0;
+  padding: 0.25em 1em;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: black;
+}
+#main .content-subtitle, #main h2 {
+  margin: 0.5em 0;
+  text-align: left;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: black;
+}
+#main .content-body {
+  padding: 0 1em 0.75em;
+  text-align: center;
+}
+
+#superfooter {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  padding: 0 3em;
+  background: #0000a5;
+}
+#superfooter ul li {
+  list-style-type: none;
+}
+#superfooter a {
+  color: white;
+}
+#superfooter a:hover {
+  color: #5cd231;
+}
+
+#footer {
+  text-align: center;
+  padding: 0.5em 1em;
+  background: #0000a5;
+  font-size: 0.85em;
+  color: white;
+}
+
+#page-volunteer-index {
+  background-image: url("https://plasticfreeqac-space.nyc3.cdn.digitaloceanspaces.com/img/home_our_mission.webp");
+  background-size: cover;
+  background-color: #b8e2fc;
+}
+#page-volunteer-index .content-body {
+  max-width: 50em;
+  margin: auto;
+}
+#page-volunteer-index section {
+  margin: 0.5em 0;
+  padding: 0.5em 0;
+  border-radius: 1em;
+  background-color: white;
+}
+#page-volunteer-index section .section-title {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+#page-volunteer-index section .section-body {
+  margin-top: 0.5em;
+  font-weight: normal;
+}
+#page-volunteer-index section .section-footer {
+  text-align: center;
+}
+
+#page-resources-index {
+  background-image: url("https://plasticfreeqac-space.nyc3.cdn.digitaloceanspaces.com/img/home_our_mission.webp");
+  background-size: cover;
+  background-color: #b8e2fc;
+}
+#page-resources-index h1 {
+  color: white;
+}
+#page-resources-index .content-body {
+  max-width: 50em;
+  margin: auto;
+}
+#page-resources-index section {
+  margin: 0.5em 0;
+  padding: 0.5em 0;
+  border-radius: 1em;
+  background-color: white;
+}
+#page-resources-index section .section-title {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+#page-resources-index section .section-body {
+  margin-top: 0.5em;
+  font-weight: normal;
+}
+
+#page-donate-index {
+  background-color: #b8e2fc;
+  background-image: url("https://plasticfreeqac-space.nyc3.digitaloceanspaces.com/img/home_hero_2.webp");
+}
+#page-donate-index .content-body {
+  max-width: 80em;
+  margin: auto;
+  padding: 2em;
+}
+#page-donate-index section {
+  width: 30em;
+  margin: 1em auto;
+  padding: 2em;
+  border-radius: 2em;
+  background-color: white;
+}
+#page-donate-index section .section-title {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+#page-donate-index section .section-body {
+  margin-top: 0.5em;
+  font-weight: normal;
+}
+#page-donate-index section:nth-child(odd) {
+  background-color: #eee;
+}
+
+#page-posts-index {
+  background: white;
+}
+#page-posts-index .content-title {
+  text-align: center;
+}
+#page-posts-index .content-subtitle {
+  color: #666;
+  text-align: center;
+}
+#page-posts-index .content-subtitle a {
+  color: #409621;
+}
+#page-posts-index .content-subtitle a:hover {
+  color: #52c02a;
+  text-decoration: none;
+}
+#page-posts-index .content-body {
+  margin: auto;
+}
+#page-posts-index section {
+  margin: 0.5em 0;
+  padding: 0.5em 0;
+  background-color: white;
+  border-radius: 0.5em;
+}
+#page-posts-index section .section-title {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+#page-posts-index section .section-body {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  margin-top: 0.5em;
+  font-weight: normal;
+  list-style: none;
+}
+#page-posts-index section .section-body a {
+  color: black;
+}
+#page-posts-index section .section-body .section-block {
+  border-style: solid;
+  border-width: thin;
+  border-color: #666;
+  background-color: #eee;
+  width: 400px;
+  margin-bottom: 1em;
+  text-align: center;
+  border-radius: 0.5em;
+}
+#page-posts-index section .section-body .section-block img {
+  width: 100%;
+}
+#page-posts-index section .section-body .section-block div:nth-of-type(1) {
+  font-size: 1em;
+  font-weight: bold;
+}
+#page-posts-index section .section-body .section-block div:nth-of-type(2) {
+  display: none;
+}
+#page-posts-index section .section-body .section-block div:nth-of-type(3) {
+  font-size: 0.75em;
+}
+
+#page-posts-view .content {
+  background-color: #eee;
+}
+#page-posts-view .content-title .post-author-date {
+  margin: 0 0 0.25em;
+  text-align: center;
+  font-weight: bold;
+}
+#page-posts-view .content-title .post-categories {
+  margin: 0.25em 0;
+  text-align: center;
+  font-weight: bold;
+}
+#page-posts-view .content-body {
+  padding: 1em 3em 0.25em;
+  max-width: 50em;
+  text-align: center;
+  margin: 1em auto 2em;
+  background-color: white;
+  border-style: solid;
+  border-color: #aaa;
+  border-width: thin;
+  border-radius: 0.5em;
+}
+#page-posts-view .content-body .post-image img {
+  width: 100%;
+}
+#page-posts-view .content-body .post-body {
+  padding: 2em 1em 1em;
+  text-align: left;
+}
+
+#page-about-index {
+  background-color: #ddd;
+}
+#page-about-index #hero {
+  background-image: url("https://plasticfreeqac-space.nyc3.digitaloceanspaces.com/img/about-banner.webp");
+  background-size: cover;
+  text-align: center;
+  height: 900px;
+  padding-top: 800px;
+  border-radius: 0 0 1em 1em;
+}
+#page-about-index #hero #hero-inner {
+  max-width: 70%;
+  margin: auto;
+  padding: 0.5em 0.25em;
+  border-radius: 1em;
+  background-color: #5cd231;
+  opacity: 0.9;
+  color: white;
+}
+#page-about-index #hero #hero-inner h1 {
+  color: white;
+}
+#page-about-index #hero #hero-inner section {
+  background-color: transparent;
+  color: white;
+}
+#page-about-index section {
+  margin: 0.5em 0;
+  padding: 0.25em 0.5em;
+  background-color: white;
+  color: black;
+}
+#page-about-index section .section-title {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+#page-about-index section .section-body {
+  margin-top: 0.5em;
+  font-weight: normal;
+}
+#page-about-index section .section-blocks {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  list-style: none;
+}
+#page-about-index section .section-blocks .section-block {
+  margin-bottom: 1em;
+}
+#page-about-index #section-vision, #page-about-index #section-mission, #page-about-index #section-history {
+  margin: 2em auto;
+  padding: 1em;
+  width: 40em;
+  border-radius: 1em;
+}
+#page-about-index #section-partners {
+  margin-bottom: 1.5em;
+  background-color: white;
+  border-radius: 1em;
+}
+#page-about-index #section-partners .section-block {
+  height: 3em;
+}
+#page-about-index #section-team {
+  border-radius: 1em;
+}
+#page-about-index #section-team .section-subtitle {
+  text-align: center;
+}
+#page-about-index #section-team .section-subtitle a:hover {
+  color: white;
+}
+#page-about-index #section-team .section-block {
+  margin-bottom: 1em;
+  width: 15em;
+  border-style: solid;
+  border-color: #666;
+  border-width: thin;
+  background: #666;
+  color: white;
+  border-radius: 0.5em;
+}
+#page-about-index #section-team .section-block img {
+  width: 100%;
+  border-radius: 0.5em 0.5em 0 0;
+}
+#page-about-index #section-team .section-block .member-info {
+  text-align: center;
+  background: #666;
+  color: white;
+}
+#page-about-index #section-team .section-block .member-info .member-title {
+  font-size: 0.75em;
+}
+#page-about-index #section-team .section-block .member-desc {
+  font-size: 0.75em;
+  text-align: left;
+  display: none;
+  padding: 0.5em;
+}
+
+#page-home-index {
+  background: white;
+}
+#page-home-index .content-banner {
+  text-align: center;
+}
+#page-home-index .content-banner img {
+  width: 100%;
+}
+#page-home-index .content-body {
+  max-width: 50em;
+  margin: auto;
+}
+#page-home-index section {
+  margin: 0.5em auto;
+  padding: 0.5em 1em;
+  background-color: #eee;
+}
+#page-home-index section .section-title {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+#page-home-index section .section-body {
+  margin-top: 0.5em;
+  font-weight: normal;
+}
+#page-home-index section .section-blocks {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  list-style: none;
+}
+#page-home-index section .section-blocks .section-block {
+  margin-bottom: 1em;
+}
+#page-home-index #section-partners {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  border-radius: 1em;
+  border-style: solid;
+  border-width: thin;
+  border-color: #999;
+  background-color: white;
+}
+#page-home-index #section-partners .section-block {
+  height: 3em;
+}
+#page-home-index #section-process {
+  border-radius: 1em;
+}
+#page-home-index #section-process .section-block {
+  width: 20em;
+  height: 350px;
+  border-style: solid;
+  border-color: #666;
+  border-width: thin;
+  background-color: #8EE070;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#page-home-index #section-process .section-block .section-block-inner {
+  border-style: solid;
+  border-color: #666;
+  border-width: thin;
+  background: #eee;
+  color: black;
+  margin: 300px auto 0;
+  width: 10em;
+  text-align: center;
+}
+#page-home-index #section-process .section-block-1 {
+  background-image: url("https://plasticfreeqac-space.nyc3.digitaloceanspaces.com/img/home_the_problem.webp");
+}
+#page-home-index #section-process .section-block-2 {
+  background-image: url("https://plasticfreeqac-space.nyc3.digitaloceanspaces.com/img/home-learn-more.jpg");
+}
+#page-home-index #section-process .section-block-3 {
+  background-image: url("https://plasticfreeqac-space.nyc3.digitaloceanspaces.com/img/home_take_action.webp");
+}
+#page-home-index #section-instagram {
+  margin: auto;
+  max-width: 700px;
+  padding: 0.5em 1em;
+  text-align: center;
+  border-radius: 1em;
+  background-color: white;
+}
+#page-home-index #section-instagram iframe {
+  margin: auto !important;
+  width: 90%;
+}
+#page-home-index #section-instagram .x1nhvcw1 {
+  display: none;
+}
+#page-home-index #section-newsletter {
+  margin: 1em auto;
+  max-width: 50%;
+  border-radius: 1em;
+  text-align: center;
+}
+#page-home-index #section-newsletter .section-label {
+  display: inline-block;
+  margin-bottom: 0.5em;
+  width: 6em;
+}
+#page-home-index #section-newsletter input {
+  display: inline-block;
+  margin-bottom: 0.5em;
+  width: 20em;
+}
+#page-home-index #section-donate {
+  margin: auto;
+  max-width: 30em;
+  text-align: center;
+  border-radius: 1em;
+}
+#page-home-index #section-donate .section-title, #page-home-index #section-donate .section-body {
+  text-align: center;
+}
+#page-home-index #section-mission {
+  background-image: url("https://plasticfreeqac-space.nyc3.digitaloceanspaces.com/img/home_our_mission.webp");
+  background-size: cover;
+  height: 400px;
+  margin: 0.5em auto;
+  margin-bottom: 0.5em;
+  padding: 60px 20px 20px;
+  text-align: center;
+  color: white;
+  border-radius: 1em;
+}
+#page-home-index #section-mission #section-mission-inner {
+  margin: auto;
+  max-width: 90%;
+  border-radius: 1em;
+}
+#page-home-index #section-mission #section-mission-inner .section-title {
+  font-size: 2em;
+}
+#page-home-index #section-mission #section-mission-inner .section-body {
+  font-size: 1.25em;
+}
+#page-home-index #section-banner {
+  text-align: center;
+  padding: 1.5em 3em;
+  background-color: white;
+  border-radius: 1em;
+  max-width: 1000px;
+}
+#page-home-index #section-banner img {
+  width: 100%;
+}
+#page-home-index #hero {
+  margin: 0 auto;
+  padding: 120px 2em 0;
+  height: 600px;
+  background-color: #ccc;
+  background-image: url("https://plasticfreeqac-space.nyc3.digitaloceanspaces.com/img/home_hero_1.webp");
+  background-size: cover;
+  color: white;
+  border-radius: 0 0 1em 1em;
+}
+#page-home-index #hero #hero-inner {
+  margin: auto;
+  width: 100%;
+  padding: 1em 1em 2em;
+  border-radius: 2em;
+}
+#page-home-index #hero h1 {
+  color: white;
+  font-size: 3em;
+  font-weight: 900;
+}
+#page-home-index #hero h2 {
+  margin: auto;
+  text-align: center;
+  max-width: 80%;
+  color: white;
+  font-size: 1.55em;
+  font-weight: bold;
+}
+#page-home-index #hero .images {
+  margin-top: 2em;
+  text-align: center;
+}
+#page-home-index #hero .images img {
+  margin: 0 0.5em;
+  height: 60px;
+}
+#page-home-index #hero .cta {
+  margin-top: 2em;
+  text-align: center;
+  color: white;
+}
+
+#page-events-index {
+  background: white;
+}
+#page-events-index .content-title {
+  text-align: center;
+}
+#page-events-index .content-subtitle {
+  color: #666;
+  text-align: center;
+}
+#page-events-index .content-subtitle a {
+  color: #409621;
+}
+#page-events-index .content-subtitle a:hover {
+  color: #52c02a;
+  text-decoration: none;
+}
+#page-events-index .content-body {
+  margin: auto;
+}
+#page-events-index section {
+  margin: 0.5em 0;
+  padding: 0.5em 0;
+  background-color: white;
+  border-radius: 0.5em;
+}
+#page-events-index section .section-title {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+#page-events-index section .section-body {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  margin-top: 0.5em;
+  font-weight: normal;
+  list-style: none;
+}
+#page-events-index section .section-body a {
+  color: black;
+}
+#page-events-index section .section-body .section-block {
+  border-style: solid;
+  border-width: thin;
+  border-color: #666;
+  background-color: #eee;
+  width: 400px;
+  margin-bottom: 1em;
+  text-align: center;
+  border-radius: 0.5em;
+}
+#page-events-index section .section-body .section-block .section-image-wrapper {
+  max-height: 15em;
+  overflow: hidden;
+}
+#page-events-index section .section-body .section-block img {
+  width: 100%;
+}
+#page-events-index section .section-body .section-block div:nth-of-type(2) {
+  font-size: 1em;
+  font-weight: bold;
+  border-top: solid #aaa thin;
+}
+#page-events-index section .section-body .section-block div:nth-of-type(3) {
+  font-size: 0.75em;
+}
+#page-events-index section .section-body .section-block div:nth-of-type(4) {
+  font-size: 0.75em;
+}
+
+#page-events-view .content {
+  background-color: #eee;
+}
+#page-events-view .content-title .event-author-date {
+  margin: 0 0 0.25em;
+  text-align: center;
+  font-weight: bold;
+}
+#page-events-view .content-title .event-categories {
+  margin: 0.25em 0;
+  text-align: center;
+  font-weight: bold;
+}
+#page-events-view .content-body {
+  padding: 1em 3em 0.25em;
+  max-width: 50em;
+  text-align: center;
+  margin: 1em auto 2em;
+  background-color: white;
+  border-style: solid;
+  border-color: #aaa;
+  border-width: thin;
+  border-radius: 0.5em;
+}
+#page-events-view .content-body .event-image img {
+  width: 100%;
+}
+#page-events-view .content-body .event-body {
+  padding: 2em 1em 1em;
+  text-align: left;
+}
+#page-events-view .content-body .event-link {
+  text-align: center;
+}
+
+#page-newsletters-index {
+  background-image: url("https://plasticfreeqac-space.nyc3.cdn.digitaloceanspaces.com/img/home_our_mission.webp");
+  background-size: cover;
+  background-color: #b8e2fc;
+}
+#page-newsletters-index section {
+  background: transparent;
+  padding: 1em;
+  margin: 2em auto 8em;
+  border-radius: 0.5em;
+}
+#page-newsletters-index section table td {
+  background-color: white;
+}
+
+#page-waivers-create {
+  background-image: url("https://plasticfreeqac-space.nyc3.cdn.digitaloceanspaces.com/img/home_our_mission.webp");
+  background-size: cover;
+  background-color: #b8e2fc;
+}
+#page-waivers-create section {
+  background: white;
+  padding: 1em;
+  margin: 2em auto 2em;
+  border-radius: 0.5em;
+}
+#page-waivers-create #section-content {
+  max-width: 50em;
+  margin: 1em auto;
+}
+#page-waivers-create #section-content ul {
+  margin: 0.5em 0;
+}
+#page-waivers-create #section-form {
+  max-width: 40em;
+  background-color: #ddd;
+}
+#page-waivers-create #section-form form table th, #page-waivers-create #section-form form table td {
+  background-color: transparent;
+  border: none;
+}
+#page-waivers-create #section-form form table table th {
+  text-align: right;
+}
+#page-waivers-create #section-form form table input {
+  width: 100%;
+}
+#page-waivers-create #section-form form table input.btn {
+  width: 10em;
+}
+#page-waivers-create #section-form form div {
+  text-align: center;
+}
+
+#page-waivers-view {
+  background-image: url("https://plasticfreeqac-space.nyc3.cdn.digitaloceanspaces.com/img/home_our_mission.webp");
+  background-size: cover;
+  background-color: #b8e2fc;
+}
+#page-waivers-view section {
+  background: white;
+  padding: 1em;
+  margin: 2em auto 2em;
+  border-radius: 0.5em;
+  max-width: 40em;
+}
+#page-waivers-view #section-content {
+  max-width: 50em;
+  margin: 1em auto;
+}
+#page-waivers-view #section-content ul {
+  margin: 0.5em 0;
+}
+
+#page-members-create {
+  background-image: url("https://plasticfreeqac-space.nyc3.cdn.digitaloceanspaces.com/img/home_our_mission.webp");
+  background-size: cover;
+  background-color: #b8e2fc;
+}
+#page-members-create section {
+  background: white;
+  padding: 1em;
+  margin: 2em auto 2em;
+  border-radius: 0.5em;
+}
+#page-members-create #section-content {
+  max-width: 50em;
+  margin: 1em auto;
+}
+#page-members-create #section-content ul {
+  margin: 0.5em 0;
+}
+#page-members-create #section-form {
+  max-width: 40em;
+  background-color: #ddd;
+}
+#page-members-create #section-form form table th, #page-members-create #section-form form table td {
+  background-color: transparent;
+  border: none;
+}
+#page-members-create #section-form form table table th {
+  text-align: right;
+}
+#page-members-create #section-form form table input {
+  width: 100%;
+}
+#page-members-create #section-form form table input.btn {
+  width: 10em;
+}
+#page-members-create #section-form form div {
+  text-align: center;
+}
+
+#page-members-view {
+  background-image: url("https://plasticfreeqac-space.nyc3.cdn.digitaloceanspaces.com/img/home_our_mission.webp");
+  background-size: cover;
+  background-color: #b8e2fc;
+}
+#page-members-view section {
+  background: white;
+  padding: 1em;
+  margin: 2em auto 2em;
+  border-radius: 0.5em;
+  max-width: 40em;
+}
+#page-members-view #section-content {
+  max-width: 50em;
+  margin: 1em auto;
+}
+#page-members-view #section-content ul {
+  margin: 0.5em 0;
+}
+
+#page-participants-create {
+  background-image: url("https://plasticfreeqac-space.nyc3.cdn.digitaloceanspaces.com/img/home_our_mission.webp");
+  background-size: cover;
+  background-color: #b8e2fc;
+}
+#page-participants-create section {
+  background: white;
+  padding: 1em;
+  margin: 2em auto 2em;
+  border-radius: 0.5em;
+}
+#page-participants-create #section-content {
+  max-width: 50em;
+  margin: 1em auto;
+}
+#page-participants-create #section-content ul {
+  margin: 0.5em 0;
+}
+#page-participants-create #section-form {
+  max-width: 40em;
+  background-color: #ddd;
+}
+#page-participants-create #section-form form table th, #page-participants-create #section-form form table td {
+  background-color: transparent;
+  border: none;
+}
+#page-participants-create #section-form form table table th {
+  text-align: right;
+}
+#page-participants-create #section-form form table input {
+  width: 100%;
+}
+#page-participants-create #section-form form table input.btn {
+  width: 10em;
+}
+#page-participants-create #section-form form div {
+  text-align: center;
+}
+
+#page-participants-view {
+  background-image: url("https://plasticfreeqac-space.nyc3.cdn.digitaloceanspaces.com/img/home_our_mission.webp");
+  background-size: cover;
+  background-color: #b8e2fc;
+}
+#page-participants-view section {
+  background: white;
+  padding: 1em;
+  margin: 2em auto 2em;
+  border-radius: 0.5em;
+  max-width: 40em;
+}
+#page-participants-view #section-content {
+  max-width: 50em;
+  margin: 1em auto;
+}
+#page-participants-view #section-content ul {
+  margin: 0.5em 0;
+}
+
+/*# sourceMappingURL=style.css.map */

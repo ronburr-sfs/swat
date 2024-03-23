@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block nav %}
+  <a href="/services">Services</a>
+  <a href="/services/create">Create</a>
+  <a href="/services/edit/{{ service.id }}">Edit</a>
+{% endblock nav %}
+
+{% block main %}
+  <h1>View Service-{{ service.id }}</h1>
+  <table>
+    <tr><td>Title</td><td>{{ service.title }}</td></tr>
+    <tr><td>Status</td><td>{{ service.status.title }}</td></tr>
+  </table>
+  <div class="content-body">
+    <a class='btn' href='/services/edit/{{ service.id }}'>Edit</a>
+  </div>
+{% endblock main %}

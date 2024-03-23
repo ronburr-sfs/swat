@@ -1,0 +1,14 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+}
+a {
+  color: lighten($brand-primary, 20%);
+  text-decoration: none;
+}
+a:hover {
+  color: lighten($brand-primary, 30%);
+}
+.text-center {
+  text-align: center;
+}
